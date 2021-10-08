@@ -1,0 +1,60 @@
+.left{
+    margin-left:0%;
+    margin-top:-10%;
+    float:left;
+  
+    width:20%;
+}
+.right{
+    margin-right: 0%;
+    margin-top:-10%;
+    float:left;
+    width:20%;
+    
+    margin-left: 51%;
+}
+.center{
+    margin-top: 14%;
+  padding:180px 100px;
+  background-repeat: no-repeat;
+  color:#fff;
+  font-size: 26px;
+  text-align: center;
+  justify-self: center;
+
+    background-image: url('../src/quantum pics/space.gif');
+    background-size: cover;
+}
+#chose{
+    margin-top: 10px;
+    padding: 200px 100px;
+}
+/*typing css*/
+.typing{
+         
+          font-family:sans-serif;
+            font-weight:800;
+            font-size:50px;
+            Text-align:center;
+            Display:flex;
+            justify-content: center;
+            Align-items:center;
+            overflow: hidden;
+            color:rgb(230, 20, 20);
+
+}
+/*top particle bg */
+.wrapper{
+    position: relative;
+    background-color: black;
+}
+.text{
+    
+    color:rgb(6, 218, 255);
+     font-size: 40px;
+     font-weight: 300;
+    position:absolute;
+    text-align: center;
+    top:40%;
+    width:100%;
+}

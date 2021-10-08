@@ -1,0 +1,64 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.div-1{
+float: left;
+width: 31.33%;
+height: 160px;
+margin-inline: 1%;
+background-color: chartreuse;
+transition: all .5s ease;
+}
+.div-1-text{
+    position: relative;
+    font-variant: full-width;
+    font-size: small;
+    margin-top: 12%;
+    margin-bottom: 10%;
+}
+.cont::after {
+content: "";
+clear: both;
+display: table;
+}
+
+.div-1:hover{
+    height: 190px;
+    pointer-events: fill;
+    color: cornsilk;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.underline{ 
+display: flexbox; 
+background-color: black;
+padding:2px 2px;
+border-radius: 30%;
+ margin-left: 43%;
+ margin-right: 43%;
+ }
+
+.social-icons{
+
+margin-inline: 8px;
+float: left;
+width: 48%;
+font-style: oblique;
+text-align: center;
+border-radius:30px ;
+}
+.social-icons-1{
+margin-top: 20px;
+margin-inline: 8px;
+float: left;
+width: 48%;
+font-style: oblique;
+text-align: center;
+border-radius:30px ;
+}

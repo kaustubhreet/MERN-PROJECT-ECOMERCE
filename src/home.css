@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left:0;
+    
+    
+}
+
+.del-img{
+    
+        width: 85%;
+       border-color: rgb(161, 225, 255);
+       height:80%;
+        border-radius: 62px;
+        position: relative;
+        margin-left: 10px;
+}
+.btn{
+    color:rgb(1, 61, 55);
+    background: rgb(102, 248, 158);
+    border-top-color: 4px solid rgb(38, 104, 1);
+}
+@keyframes movingTopToBottom{
+    0%{
+        top:-15px;
+
+    }
+    45%{
+        top:50%;
+    }
+    90%{
+        top:140px;
+    }
+}
+.divtreview{
+    animation: movingTopToBottom 8s ease-in infinite;
+    /*-webkit-animation: moingTopToBottom ease 3s infinite;
+    */position:relative;
+    color: rgb(24, 22, 22);
+   background-color: #f1f8f5;
+   font-size: 18px;
+   font-weight: 600;
+   
+}
+.underline-1{
+    display: flexbox; background-color: black;padding:2px 2px;
+        margin-left: 43%;margin-right: 43%;border-radius: 40%;
+}
+
+    
+
+.social-box{
+background: rgb(71, 2, 92);
+margin: 3%;
+display: table;
+content:" ";
+float: left;
+width: 43%;
+transition: all 0.5s ease-in-out cubic-bezier(0.165, 0.84, 0.44, 1);
+font-style: oblique;
+text-align: center;
+animation-duration: 5s;
+animation-fill-mode: forwards;
+color:whitesmoke;
+animation-direction: alternate;
+animation-name: social;
+animation-delay: 4s;
+border-radius:2% ;
+box-shadow:6px 6px 8px violet;
+}
+@keyframes social {
+from {background-color: red;
+box-shadow:6px 6px 8px rgb(246, 115, 144);
+}
+to {background-color: blue;
+box-shadow:6px 6px 8px rgb(108, 210, 250);}
+to{
+    background: rgb(71, 2, 92);
+    box-shadow:6px 6px 8px violet;
+}
+}
