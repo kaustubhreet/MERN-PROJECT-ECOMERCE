@@ -1,7 +1,6 @@
 import React from 'react'
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import Carousel from 'react-bootstrap/Carousel';
 import './App.css';
 import Home from './Home';
 import About from './About';
@@ -10,27 +9,44 @@ import Contact from './Contact';
 import Navbar from './Navbar';
 import Blog from './Blog';
 import { Switch,Route,Redirect } from 'react-router';
-
+import Cart from './cart.jsx';
+import ProductScreen from './screen/ProductScreen.js';
+import Signup from './components/Signup.js';
+import Login from './components/Login.js';
+import NoteState from './context/notes/NoteState';
+import Blog1 from './Blog-1.jsx';
+import Blog2 from './Blog-2.jsx';
+import Blog3 from './Blog-3.jsx';
+import NotesHome from './NotesHome.js';
 
 const App=()=>{
   
     
   return (
       <div>
-        
+        <NoteState>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={Home} />
-        
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/cart" component={Cart} />
           <Route exact path="/about" component={About} />
-          
+          <Route exact path="/product" component={ProductScreen} />
           <Route exact path="/service" component={Service} />
           <Route exact path="/blog" component={Blog} />
-          
+          <Route exact path="/login">
+                <Login />
+              </Route>
+              <Route exact path="/signup">
+                <Signup />
+              </Route>
+              <Route exact path="/" component={NotesHome} />
+              <Route exact path="/blog1" component={Blog1} />
+              <Route exact path="/blog2" component={Blog2} />
+              <Route exact path="/blog3" component={Blog3} />
           <Route exact path="/contact" component={Contact} />
         <Redirect to='/'></Redirect>  
         </Switch>
-       
+        </NoteState>
       </div>
   );
 };

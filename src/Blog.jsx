@@ -1,15 +1,19 @@
-import react from 'react'
 import iblog from './quantum pics/pic-blog-1.png';
-import { NavLink } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
-import carf from './quantum pics/pic-blog-1.png';
-import './Blog.css';
+import carf from './quantum pics/c1.jpeg';
+import carf2 from './quantum pics/c2.jpg';
+import carf3 from './quantum pics/c3.jpg';
 import Flag from './footer.jsx';
+import { Link } from 'react-router-dom';
+import iblog3 from './quantum pics/software.gif';
+import iblog1 from './quantum pics/development.gif';
+import iblog2 from './quantum pics/app-developer.png';
+import './Blog.css';
 const Blog = () => {
     return (
         <>
 
-            <div className="container-fluid ">
+            <div className="container-fluid "  style={{padding:"100px 200px",backgroundImage:"radial-gradient(circle,  rgb(4 194 246), rgb(86 255 121))"}}>
                <center><br /> <h1><strong>CONCEPT</strong> BEHIND VIDEOBOMB</h1>
                     <div className="underline"></div>
                     <br />
@@ -21,22 +25,19 @@ const Blog = () => {
                     </small></center><br />
             </div>
             <div className="count-pic">
-                <img src={iblog} style={{width:"100%",height:"80%"}}  />
-
+                <img src={iblog} style={{width:"100%",height:"80%"}}  alt="dia" />
             </div>
-            <div className="container-fluid bg-success text-light" style={{
-    backgroundColor:"blanchedalmond"
-   }}>
+            <div className="container-fluid " style={{padding:"100px 200px",backgroundImage:"radial-gradient(circle,rgb(114 242 45),rgb(242 209 0))"}}>
                <center><h1><br /><br />PROBLEM <strong>STATEMENT</strong></h1></center>
                 <div className="underline" ></div>
                 <br />
                <center><small >The presence of multiple objects in multiple categories caused many issues to keep turnaround time in control.<br/>
                 Integrating different gestures control on a single screen was a bit complicated.Minimizing external
                 sound disturbance to deliver a lucid sound effect to the added objects.
-                </small></center><br/>
+                </small></center><br/><br /><br />
                 
             </div>
-            <center>
+           {/* <center>
             <br/>
                 <div className="cont">
 
@@ -57,55 +58,98 @@ const Blog = () => {
                         
                     </div>
                     <div className="div-1">
-                        
+
                         <div className="div-1-text">
                         <strong>MOBILE APP</strong>
                         <br />  iOS
                         </div>
                         
                     </div>
-                </div></center>
+  </div></center>*/}
             <br />
-
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+   < img src={iblog1} class="card-img-top"  alt="WEB"/>
+      <div class="card-body">
+        <h5 class="card-title">  <Link to="/Blog1" >HOW TO BECOME WEBSITE DEVELOPER?</Link></h5>
+        </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+    <img src={iblog2} class="card-img-top"  alt="APP"/>
+      <div class="card-body">
+        <h5 class="card-title"> <Link to="/Blog2"> HOW TO BECOME APP DEVELOPER?</Link></h5>
+       </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+    < img src={iblog3} class="card-img-top" alt="SOFTWARE"/>
+      <div class="card-body">
+        <h5 class="card-title"><Link to="/Blog3" >HOW TO BECOME SOFTWARE DEVELOPER?</Link></h5>
+          </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
             <br />
+            <div className="container-fluid my-3">
             <Carousel variant="dark">
   <Carousel.Item fade interval={1000}>
-    <img
+    <img 
       className="d-block w-100"
-      src={carf}
+      src={carf} style={{height:"500px"}}
       alt="First slide"
     />
-    <Carousel.Caption>
-      <h5>First slide label</h5>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
+    
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={carf}
+      src={carf2}style={{height:"500px"}}
       alt="Second slide"
     />
-    <Carousel.Caption>
-      <h5>Second slide label</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
+    
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={carf}
+      src={carf3} style={{height:"500px"}}
       alt="Third slide"
     />
-    <Carousel.Caption>
-      <h5>Third slide label</h5>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
+   
   </Carousel.Item>
 </Carousel>
-<br/><br></br>
+</div>
+<br/>
+{/*pages no */}
+<div className="container-fluid">
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="Blog1">1</a></li>
+    <li class="page-item"><a class="page-link" href="Blog2">2</a></li>
+    <li class="page-item"><a class="page-link" href="Blog3">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+</div>
 
-            <div className="social">
+          {/*  <div className="social">
                 <center><h1><strong>OUR </strong>STORY</h1> </center>
                 <br />
                 <div className="underline" ></div>
@@ -139,8 +183,8 @@ const Blog = () => {
                         ipsum obcaecati est ex voluptatem molestiae culpa fuga praesentium.</p>
                 </div>
                
-            </div>
-           
+  </div>*/}
+            < Flag />
         </>
     );
 };

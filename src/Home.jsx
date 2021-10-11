@@ -1,16 +1,15 @@
-import react from 'react'
 import imag from './congrats.png';
-import Common from './Common';
 import './home.css';
 import Temp from './slider.js';
 import FAQs from './FAQs';
-import imag2 from '../src/quantum pics/pic-blog-1.png';
 import imag3 from '../src/quantum pics/pic-blog-2.png';
 import Flag from './footer.jsx';
+
 
 const Home = () => {
     return (
         <>
+        
             <section style={{ maxHeight: "500px" }}>
                 <div className="container-fluid">
 
@@ -127,7 +126,7 @@ const Home = () => {
             </section>
 <section>
 
-    <div class="container-fluid">
+    <div class="container-fluid shadow-lg p-3 mb-5 bg-white rounded">
    <FAQs /><br/>
         </div>
 </section>

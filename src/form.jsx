@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 import icon1 from '../src/quantum pics/icon1.png';
 import icon2 from '../src/quantum pics/icon2.png';
@@ -17,7 +16,7 @@ return(
       <div class="row">
         <div class="col-lg-6">
           <div class="card-shadow">
-            <img src={contact} class="img-fluid"/>
+            <img src={contact} class="img-fluid" alt="dia"/>
           </div>
         </div>
         <div class="col-lg-6">
@@ -58,7 +57,7 @@ return(
               <div class="col-lg-4 col-md-4">
                 <div class="card-body d-flex align-items-center c-detail pl-0">
                   <div class="mr-3 align-self-center">
-                    <img src={icon1}/>
+                    <img src={icon1} alt="dia"/>
                   </div>
                   <div class="">
                     <h6 class="font-weight-medium">Address</h6>
@@ -70,7 +69,7 @@ return(
               <div class="col-lg-4 col-md-4">
                 <div class="card-body d-flex align-items-center c-detail">
                   <div class="mr-3 align-self-center">
-                    <img src={icon2}/>
+                    <img src={icon2} alt="dia"/>
                   </div>
                   <div class="">
                     <h6 class="font-weight-medium">Phone</h6>
@@ -82,7 +81,7 @@ return(
               <div class="col-lg-4 col-md-4">
                 <div class="card-body d-flex align-items-center c-detail">
                   <div class="mr-3 align-self-center">
-                    <img src={icon3} />
+                    <img src={icon3} alt="dia" />
                   </div>
                   <div class="">
                     <h6 class="font-weight-medium">Email</h6>

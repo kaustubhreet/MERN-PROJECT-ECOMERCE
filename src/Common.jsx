@@ -1,5 +1,4 @@
 import React from 'react'
-import imag from './congrats.png';
 import { NavLink } from 'react-router-dom';
 
 const Common=(props)=>{

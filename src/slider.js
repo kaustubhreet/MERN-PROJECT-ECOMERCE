@@ -22,19 +22,21 @@ export default class AutoPlay extends Component {
       cssEase: "linear"
     };
     return (
-      <div>
-       <center><strong><h1>Our Clients</h1></strong></center>
+      <div >
+        <div class=" container  shadow p-3 mb-5 bg-white rounded"> <center><h1><strong>OUR </strong>CLIENT</h1> </center>
+                   
+                    </div>
         <Slider {...settings}>
           <div>
           <img
       src={icon1}
-      alt="first slide" style={{height:"200px",width:"150px"}}
+      alt="first slide" style={{height:"250px",width:"150px"}}
     />
           </div>
           <div>
           <img
       src={icon2}
-      alt="first slide" style={{height:"200px",width:"150px"}}
+      alt="first slide" style={{height:"250px",width:"150px"}}
     />
           </div>
           <div>
@@ -46,19 +48,19 @@ export default class AutoPlay extends Component {
           <div>
           <img
       src={icon4}
-      alt="first slide" style={{height:"200px",width:"150px"}}
+      alt="first slide" style={{height:"250px",width:"150px"}}
     />
           </div>
           <div>
           <img
       src={icon5}
-      alt="first slide" style={{height:"200px",width:"150px"}}
+      alt="first slide" style={{height:"250px",width:"150px"}}
     />
           </div>
           <div>
           <img
       src={icon6}
-      alt="first slide" style={{height:"200px",width:"150px"}}
+      alt="first slide" style={{height:"250px",width:"150px"}}
     />
           </div>
         </Slider>

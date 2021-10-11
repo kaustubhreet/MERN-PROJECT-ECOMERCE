@@ -1,25 +1,26 @@
-import react from 'react'
 import Carousel from 'react-bootstrap/Carousel';
-import carf from './quantum pics/pic-blog-1.png';
-import Table from 'react-bootstrap/Table';
+import carf from './quantum pics/c1.jpeg';
+import carf2 from './quantum pics/c2.jpg';
+import carf3 from './quantum pics/c3.jpg';
 import './love.css';
 import Flag from './footer.jsx';
 import Contactfo from './form.jsx';
 import Temp from './slider.js';
 
+
 const Contact=()=>{
   return(
     
         <div>
+          
       <br/>
 < Contactfo/>
 <br/>
-            
-            <Carousel variant="dark">
+               <Carousel variant="dark">
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={carf}
+      src={carf} style={{height:"600px"}}
       alt="First slide"
     />
     <Carousel.Caption>
@@ -30,7 +31,7 @@ const Contact=()=>{
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={carf}
+      src={carf2}  style={{height:"600px"}}
       alt="Second slide"
     />
     <Carousel.Caption>
@@ -41,7 +42,7 @@ const Contact=()=>{
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={carf}
+      src={carf3} style={{height:"600px"}}
       alt="Third slide"
     />
     <Carousel.Caption>

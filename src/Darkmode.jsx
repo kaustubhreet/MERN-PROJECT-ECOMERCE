@@ -1,4 +1,4 @@
-import react,{useState} from 'react';
+import {useState} from 'react';
 
 const Darkmode=()=>{
 const [Dark, setDark] = useState({
@@ -8,12 +8,12 @@ const [Dark, setDark] = useState({
 })
 
 const Toggle=()=>{
-  if(Dark.Color=='#fff'){
+  if(Dark.Color==='#fff'){
 setDark({
     backgroundColor:'#fff',
     Color:'#000' 
   })
-  document.body.style.backgroundColor = 'grey';
+  document.body.style.backgroundColor = 'black';
 }
   else{
   setDark(
