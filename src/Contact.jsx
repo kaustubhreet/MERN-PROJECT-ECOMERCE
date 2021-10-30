@@ -51,7 +51,7 @@ const Contact=()=>{
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
-<br/>
+<br/><br/><br/><br/>
 <Temp/>
         <br/>
   

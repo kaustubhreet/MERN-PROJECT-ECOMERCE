@@ -9,7 +9,7 @@ const Team=()=>{
     return(
       <>
      <div class="container shadow-lg p-3 mb-5 bg-white rounded"><h1><center>WEB DEVELOPER</center></h1>
-     </div>
+     
      <div className="container">
      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -31,11 +31,13 @@ const Team=()=>{
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     
   </button>
+</div></div>
 </div>
-</div>
-     <div class="container my-4 shadow-lg p-3 mb-5 bg-white rounded"><h1><center>APP DEVELOPER</center></h1>
+     <div class="container-fluid my-4 shadow-lg p-3 mb-5 bg-white rounded"><h1><center>APP DEVELOPER</center></h1>
+     <img src={team1} class="d-block w-100" style={{height:"400px"}} alt="1"/>
      </div>
-     <div class="container shadow-lg p-3 mb-5 bg-white rounded"><h1><center>SOFTWARE DEVELOPER</center></h1>
+     <div class="container-fluid shadow-lg p-3 mb-5 bg-white rounded"><h1><center>SOFTWARE DEVELOPER</center></h1>
+     <img src={team2} class="d-block w-100" style={{height:"400px"}} alt="1"/>
      </div>
       </>
     );

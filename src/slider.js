@@ -23,44 +23,43 @@ export default class AutoPlay extends Component {
     };
     return (
       <div >
-        <div class=" container  shadow p-3 mb-5 bg-white rounded"> <center><h1><strong>OUR </strong>CLIENT</h1> </center>
-                   
-                    </div>
+        <div class="container shadow p-3 mb-5 bg-white rounded"> 
+           <center><h1><strong>OUR </strong>CLIENT</h1> </center>
+                   </div>
         <Slider {...settings}>
           <div>
           <img
       src={icon1}
-      alt="first slide" style={{height:"250px",width:"150px"}}
-    />
+      alt="first slide" style={{height:"250px",width:"220px",borderRadius:"50%"}}/>
           </div>
           <div>
           <img
       src={icon2}
-      alt="first slide" style={{height:"250px",width:"150px"}}
+      alt="first slide" style={{height:"250px",width:"220px",borderRadius:"50%"}}
     />
           </div>
           <div>
           <img
       src={icon3}
-      alt="first slide" style={{height:"250px",width:"150px"}}
+      alt="first slide" style={{height:"250px",width:"220px",borderRadius:"50%"}}
     />
           </div>
           <div>
           <img
       src={icon4}
-      alt="first slide" style={{height:"250px",width:"150px"}}
+      alt="first slide" style={{height:"250px",width:"220px",borderRadius:"50%"}}
     />
           </div>
           <div>
           <img
       src={icon5}
-      alt="first slide" style={{height:"250px",width:"150px"}}
+      alt="first slide" style={{height:"250px",width:"220px",borderRadius:"50%"}}
     />
           </div>
           <div>
           <img
       src={icon6}
-      alt="first slide" style={{height:"250px",width:"150px"}}
+      alt="first slide" style={{height:"250px",width:"220px",borderRadius:"50%"}}
     />
           </div>
         </Slider>

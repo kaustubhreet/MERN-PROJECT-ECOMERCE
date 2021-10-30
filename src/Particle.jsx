@@ -1,4 +1,4 @@
-import react from  'react';
+
 import Particles from 'react-particles-js';
 import './About.css';
 

@@ -34,12 +34,17 @@
     45%{
         top:50%;
     }
-    90%{
+    100%{
         top:140px;
     }
 }
+.slid{
+    height:360px;
+    overflow-y: scroll;
+}
 .divtreview{
-    animation: movingTopToBottom 8s ease-in infinite;
+    
+    animation: movingTopToBottom 7s ease-in infinite;
     /*-webkit-animation: moingTopToBottom ease 3s infinite;
     */position:relative;
     color: rgb(24, 22, 22);

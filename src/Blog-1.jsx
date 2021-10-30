@@ -1,17 +1,19 @@
 import Flag from './footer.jsx';
 import ImagBlog from './quantum pics/development.gif';
 import FAQs from './FAQs';
+import { Link } from 'react-router-dom';
+
  const Blog1=()=>{
      return (
          <>
-         <div className="container-fluid mt-3">
-             <h1><center><br/>WEB  DEVELOPMENT</center></h1>
+         <div className="container-fluid mt-3 ">
+             <h1 className=" container shadow-lg bg-warning rounded" ><center>WEB  DEVELOPMENT</center></h1>
              <hr></hr>
              <div className="continer">
                 <img src={ImagBlog} style={{width:"100%",height:"60%"}}  alt="dia" />
 
             </div>
-             <div className="container mt-3">
+             <div className="container-fluid mt-3 shadow-lg p-3 mb-5 bg-white rounded">
          <h5>    <br/><br/> <br/>
 
  If you’re new to the field of software development, the toughest part of learning programming is deciding where to begin. There are hundreds of programming languages in widespread use, each with its own complexities and idiosyncrasies.
@@ -109,13 +111,13 @@ When beginning your journey into coding, only you can answer the question of the
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
     <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      <Link class="page-link" to="#" tabindex="-1" aria-disabled="true">Previous</Link>
     </li>
     <li class="page-item"><a class="page-link" href="Blog">1</a></li>
     <li class="page-item"><a class="page-link" href="Blog2">2</a></li>
     <li class="page-item"><a class="page-link" href="Blog3">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+      <Link class="page-link" to="#">Next</Link>
     </li>
   </ul>
 </nav>

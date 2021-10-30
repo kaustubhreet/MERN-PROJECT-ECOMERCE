@@ -1,17 +1,18 @@
 import Flag from './footer.jsx';
 import ImagBlog from './quantum pics/software.gif';
 import FAQs from './FAQs';
+import { Link } from 'react-router-dom';
 
 const Blog3 = () => {
     return (
         <>
-            <div className="container-fluid mt-3">
-                <h1><center><br/>HOW TO BECOME SOFTWARE DEVELOPMENT IN 2021?</center></h1><hr></hr>
+            <div className="container">
+                <h1 className="shadow-lg p-3 mb-5 bg-white rounded"><center>HOW TO BECOME SOFTWARE DEVELOPMENT IN 2021?</center></h1><hr></hr>
                 <div className="container mt-3">
                 <div className="continer">
-                <img src={ImagBlog} style={{width:"100%",height:"60%"}}  alt="dia" />
-
+                <img src={ImagBlog} style={{width:"100%",height:"60%"}}  alt="dia" /> 
             </div>
+            <div className="container-fluid mt-3 shadow-lg bg-white rounded">
                 <h2><br/><br/> What is Software Engineering? </h2><br/>
                     Software engineering is a process of analyzing user requirements and then designing, building, and testing software application which will satisfy those requirements.
                     <br/><br/>
@@ -104,25 +105,27 @@ const Blog3 = () => {
                     Providing relevant data through the collection, analysis, and summarizing of service and development issues
                     <br/><br/> <br/>
                 </div>
-                
+                </div>
             </div>
-           
+           <br/><br/>
             {/*pages no */}
             <div className="container-fluid">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
                         <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            <Link class="page-link" to="#" tabindex="-1" aria-disabled="true">
+                                Previous</Link>
                         </li>
                         <li class="page-item"><a class="page-link" href="Blog1">1</a></li>
                         <li class="page-item"><a class="page-link" href="Blog2">2</a></li>
                         <li class="page-item"><a class="page-link" href="Blog">3</a></li>
                         <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
+                            <Link class="page-link" to="#">Next</Link>
                         </li>
                     </ul>
                 </nav>
             </div>
+
             <div class="container-fluid shadow-lg p-3 mb-5 bg-white rounded">
    <FAQs /><br/>
         </div>

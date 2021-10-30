@@ -16,7 +16,8 @@ const NoteState = (props) => {
         "auth-token":localStorage.getItem('token')
       }
     });
-    const json = await response.json(); 
+    var json = await response.json()
+    //console.log(json);
     setNotes(json);
   }
 
@@ -24,7 +25,7 @@ const NoteState = (props) => {
   const addNote = async (title, description, tag) => {
     // TODO: API Call
     // API Call 
-    const response = await fetch(`${host}/api/notes/addnote`, {
+    const response = await fetch(`${host}/api/notes/addnotes`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

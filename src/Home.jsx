@@ -47,13 +47,13 @@ const Home = () => {
                             </div>
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
-                                    <img src={imag3} class="d-block w-100" />
+                                    <img src={imag3} class="d-block w-100" alt="23"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src={imag3} class="d-block w-100" />
+                                    <img src={imag3} class="d-block w-100" alt="23"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src={imag3} class="d-block w-100" />
+                                    <img src={imag3} class="d-block w-100" alt="23"/>
                                 </div>
                             </div>
                             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -66,15 +66,23 @@ const Home = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="col" >
+                    <div className="col slid" >
+                        <div className="divtreview">
+                            <p>We are starting to take new projets from 22-10-2021</p>
+                        </div>
+                        <div className="divtreview">
+                            <p>We are starting to take new projets from 22-10-2021</p>
+                        </div>
+                        <div className="divtreview">
+                        <p>We are going to hire senior UI designer from 20-10-2021</p>
+                        </div>
                         <div className="divtreview">
                             <p>We are starting to take new projets from 22-10-2021</p>
                         </div>
                         <div class="divtreview">
-                            <p>We are going to hire senior UI designer from 20-10-2021</p>
                             <p>New app of our company is live now.Download app for regural updated.</p>
-
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -83,10 +91,8 @@ const Home = () => {
                 <center><h1><strong>OUR </strong>STORY</h1> </center>
                 <br />
                 <div className="underline"  >
-
                 </div>
                 <br />
-
                 <div className="social">
                     <div className="social-box">
                         <h1>social-1</h1>
@@ -106,8 +112,6 @@ const Home = () => {
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Molestias quod voluptates nostrum modi doloribus excepturi nisi praesentium natus reiciendis?
                             Voluptatibus quia earum quisquam quibusdam nobis distinctio ipsam dolore error itaque.</p>
-
-
                     </div>
                     <div className="social-box">
                         <h1>social-1</h1>
@@ -119,15 +123,15 @@ const Home = () => {
 
             </div>
             <br/>
-            <section>
-                
-    < Temp />
-</section>
+            </section>
+           <section>
+           
+< Temp /><br/><br/><br/>
             </section>
 <section>
 
     <div class="container-fluid shadow-lg p-3 mb-5 bg-white rounded">
-   <FAQs /><br/>
+   <FAQs /><br/><br/>
         </div>
 </section>
 <br/>

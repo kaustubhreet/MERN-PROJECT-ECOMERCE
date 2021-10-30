@@ -1,15 +1,34 @@
-import ProductScreen from './screen/ProductScreen';
 import {NavLink} from 'react-router-dom';
-import { Link ,Route} from 'react-router-dom';
-
-import Sdata from './Sdata';
+import { Link,Route } from 'react-router-dom';
+import { useState,useEffect} from 'react';
 import Flag from './footer.jsx';
 import Particle from './Particle.jsx';
 import './About.css';
+import {useSelector,useDispatch} from 'react-redux';
+import { listProducts } from './actions/productActions.js';
+//import imag3 from './congrats3.png';
+//import imag4 from './congrats4.png';
+//import imag5 from './congrats5.png';
+//import imag6 from './congrats6.png';
+//import img1 from '../src/quantum pics/pic-blog-1.png';
+//import img2 from '../src/quantum pics/pic-blog-2.png';
 
 const Service = () => {
- 
-    return (
+   //const [products,setProduct]=useState([]);
+   const productList=useSelector(state=>state.productList);
+   const {products,loading,error}=productList;
+  const dispatch=useDispatch();
+   useEffect(()=>{
+  dispatch(listProducts());
+  return()=>{
+   //
+  };
+   },[])
+ console.log(products);
+    return loading? <div>loading...</div>:
+    error?<div>{error}</div>: 
+    
+    (
         <>
             <Particle />
             <div className="my-5">
@@ -18,31 +37,26 @@ const Service = () => {
 
             <div className="container-fluid mb-5">
                 <div className="row">
+                <Route path={'/product/:id'+products._id}></Route> 
                     <div className="col-10 mx-auto">
                         <div className="row gy-4">
-                            {
-                                Sdata.map((val, ind) => /*{
-                                    return 
-                                    
-                                    <Card key={ind}
-                                        imgsrc={val.imgsrc}
-                                        id={val._id}
-                                        title={val.title}
-
-                                />*/
+                        
+                                { products.map((val)=>{
+                                    return (
                 <div className="col-md-4 col-10 mx-auto">
-                    {/* <Route path="/product/:id" component={ProductScreen}/> */}
-          <div class="card shadow p-3 mb-5 bg-white rounded" key={ind} >
-      <img src={val.imgsrc} class="card-img-top" alt="..."/>
+               
+          <div class="card shadow p-3 mb-5 bg-white rounded" key={val._id} >
+          <Link to={'/product/'+val._id}><img src={val.imgsrc} class="card-img-top" alt="343"/></Link>
       <div className="card-body">
-      <Link to={'/product'}><h5 className="card-title"> {val.title}</h5></Link>
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <NavLink to={'./product'} className="btn btn-primary">
-        <ProductScreen id={val._id}/> Go somewhere</NavLink>
+      <h5 className="card-title"> {val.title}</h5>
+        <p className="card-text">{val.desc}</p>
+       <h6><strong>${val.price}</strong></h6>
+        <NavLink to={'./product/'+val._id} className="btn btn-primary">
+         Buy Now</NavLink>
       </div>
     </div>
-  </div>
-
+  </div>                 )
+                                }
                                 )
                             }
                     </div>

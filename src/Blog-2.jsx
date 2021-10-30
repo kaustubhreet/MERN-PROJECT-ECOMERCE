@@ -1,13 +1,14 @@
 import Flag from './footer.jsx';
 import ImagBlog from './quantum pics/app-developer.png';
 import FAQs from './FAQs';
+import { Link } from 'react-router-dom';
 
 const Blog2=()=>{
     return (
         <>
         <div className="container-fluid mt-3"><br/>
-            <h1><center>HOW TO BECOME APP DEVELOPER IN 2021</center></h1><hr></hr><br/><br/> <br/>
-            <div className="container mt-3">
+            <h1 className="shadow-lg p-3 mb-5 bg-white rounded"><center>HOW TO BECOME APP DEVELOPER IN 2021</center></h1><hr></hr><br/><br/> <br/>
+            <div className="container mt-3 shadow-lg p-3 mb-5 bg-white rounded">
            <h4> Mobile Development:<br/> Courses, Training, and Other Resources
 How to Learn Mobile Development
 It’s a safe bet that you use applications on your smartphone every day. From messaging, language-learning, and calorie-tracking to banking and investing, it seems like there’s an app for everything. With the growing ubiquity of apps, mobile development has become more relevant than ever.
@@ -192,13 +193,13 @@ To break into the field, you need to be fully equipped with the skills and knowl
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
     <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      <Link class="page-link" to="#" tabindex="-1" aria-disabled="true">Previous</Link>
     </li>
     <li class="page-item"><a class="page-link" href="Blog1">1</a></li>
     <li class="page-item"><a class="page-link" href="Blog">2</a></li>
     <li class="page-item"><a class="page-link" href="Blog3">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+    <Link class="page-link" to="#">Next</Link>
     </li>
   </ul>
 </nav>
