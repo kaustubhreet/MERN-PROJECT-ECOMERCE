@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-//import data from '../Sdata';
 import './ProductScreen.css';
 import { useEffect } from 'react';
 import { detailsProduct } from '../actions/productActions';
@@ -17,15 +16,7 @@ function ProductScreen(props){
 //
         };
     },[])
-/*    console.log({props});
-  //console.log(data.val._id);
-      console.log(props.match.params.id);
-      const product=data.find(x=>x._id===props.match.params.id);
-     
-      const changeImage=(element)=> {
-        var main_prodcut_image ='main_product_image';
-        main_prodcut_image.src = element.src;
-        }*/
+
    return(
        <>
            <div className="back-to-result">
@@ -40,13 +31,13 @@ function ProductScreen(props){
             <div class="col-md-6 border-end">
                 <div class="d-flex flex-column justify-content-center">
                     <div class="main_image"> 
-                    <img  src={product.imgsrc} id="main_product_image" style={{width:"100%",height:"100%"}}/> </div>
+                    <img  src={product.imgsrc} id="main_product_image" alt="product-img" style={{width:"100%",height:"100%"}}/> </div>
                     <div class="thumbnail_images">
                         <ul id="thumbnail">
-                            <li><img  src={product.imgsrc} style={{width:"80px"}}/></li>
-                            <li><img  src={product.imgsrc} style={{width:"80px"}}/></li>
-                            <li><img  src={product.imgsrc} style={{width:"80px"}}/></li>
-                            <li><img  src={product.imgsrc} style={{width:"80px"}}/></li>
+                            <li><img  src={product.imgsrc} style={{width:"80px"}} alt="product-img"/></li>
+                            <li><img  src={product.imgsrc} style={{width:"80px"}} alt="product-img"/></li>
+                            <li><img  src={product.imgsrc} style={{width:"80px"}} alt="product-img"/></li>
+                            <li><img  src={product.imgsrc} style={{width:"80px"}} alt="product-img"/></li>
                         </ul>
                     </div>
                 </div>

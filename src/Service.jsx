@@ -1,17 +1,11 @@
 import {NavLink} from 'react-router-dom';
 import { Link,Route } from 'react-router-dom';
-import { useState,useEffect} from 'react';
+import {useEffect} from 'react';
 import Flag from './footer.jsx';
 import Particle from './Particle.jsx';
 import './About.css';
 import {useSelector,useDispatch} from 'react-redux';
 import { listProducts } from './actions/productActions.js';
-//import imag3 from './congrats3.png';
-//import imag4 from './congrats4.png';
-//import imag5 from './congrats5.png';
-//import imag6 from './congrats6.png';
-//import img1 from '../src/quantum pics/pic-blog-1.png';
-//import img2 from '../src/quantum pics/pic-blog-2.png';
 
 const Service = () => {
    //const [products,setProduct]=useState([]);
