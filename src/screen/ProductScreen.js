@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './ProductScreen.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { detailsProduct } from '../actions/productActions';
 
 function ProductScreen(props){
-
+   const [qty,setQty]=useState([1]);
     const productDetails=useSelector(state=>state.productDetails);
     const {product,loading,error}=productDetails;
     const dispatch=useDispatch();
@@ -15,7 +15,11 @@ function ProductScreen(props){
         return ()=>{
 //
         };
-    },[])
+    },[]);
+
+    const handleAddToCart=()=>{
+        props.history.push("/cart/"+props.match.params.id+"?qty="+qty)
+    }
 
    return(
        <>
@@ -64,15 +68,26 @@ function ProductScreen(props){
                             </ul>
                         </div>
                     </div>
-                    <div class="buttons d-flex flex-row mt-5 gap-3"> 
-                    <button class="btn btn-outline-dark">Buy Now</button>
-                     <button class="btn btn-dark">Add to Basket</button> 
-                     </div>
-                    <div class="search-option"> <i class='bx bx-search-alt-2 first-search'></i>
-                        <div class="inputs"> 
-                        <input type="text" name=""/> 
-                        </div> <i class='bx bx-share-alt share'></i>
+                    <div>
+                        Status: {product.countInStock>0?"In stock":"out of stock"}
                     </div>
+                        <div class="inputs"> 
+                        Qty:<select value={qty} onChange={(e)=>{
+                            setQty(e.target.value)}}>
+                            {[...Array(product.countInStock).keys()].map(x=>
+                                <option key={x+1} value={x+1}>{x+1}</option>)}
+                        
+                        </select>
+                        { product.countInStock >0?
+                      <div className="buttons d-flex flex-row mt-5 gap-3"> 
+                    <button className="btn btn-outline-dark">Buy Now</button>
+                     <button onClick={handleAddToCart} className="btn btn-dark">Add to Basket</button> 
+                     </div>:
+                     <div><button className="btn btn-dark">Out of Stock</button></div>}
+                     </div> 
+                     
+                    <div class="search-option"> 
+                              </div>
                 </div>
             </div>
         </div>

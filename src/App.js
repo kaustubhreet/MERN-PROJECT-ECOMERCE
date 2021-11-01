@@ -9,7 +9,7 @@ import Contact from './Contact';
 import Navbar from './Navbar';
 import Blog from './Blog';
 import { Switch,Route,Redirect } from 'react-router';
-import Cart from './cart.jsx';
+import Cart from './cartScreen.jsx';
 import ProductScreen from './screen/ProductScreen.js';
 import Signup from './components/Signup.js';
 import Login from './components/Login.js';
@@ -30,7 +30,7 @@ const App=()=>{
         <Alert message="contents" />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/cart/:id?" component={Cart} />
           <Route exact path="/about" component={About} />
           <Route exact path="/product/:id" component={ProductScreen} />
           <Route exact path="/service" component={Service} />
