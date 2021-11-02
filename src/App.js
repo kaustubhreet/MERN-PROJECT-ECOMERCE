@@ -8,6 +8,7 @@ import Service from './Service';
 import Contact from './Contact';
 import Navbar from './Navbar';
 import Blog from './Blog';
+import checkout from './checkOutScreen';
 import { Switch,Route,Redirect } from 'react-router';
 import Cart from './cartScreen.jsx';
 import ProductScreen from './screen/ProductScreen.js';
@@ -35,6 +36,7 @@ const App=()=>{
           <Route exact path="/product/:id" component={ProductScreen} />
           <Route exact path="/service" component={Service} />
           <Route exact path="/blog" component={Blog} />
+          <Route exact path="/checkout" component={checkout} />
           <Route exact path="/login">
                 <Login />
               </Route>

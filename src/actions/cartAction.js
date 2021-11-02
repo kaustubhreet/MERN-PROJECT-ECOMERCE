@@ -14,14 +14,16 @@ const addToCart=(productId,qty)=>async (dispatch)=>{
           countInStock:data.countInStock,
           qty
       }});
-    
+    //const {cart:{cartItems}}=getState;
+    //Cookies.set("cartItems",JSON.stringify(cartItems));
     }catch(error){
 console.log(error);
     };
 }
-const removeFromCart=(productId)=>(dispatch,getState)=>{
+const removeFromCart=(productId)=>(dispatch)=>{
     dispatch({type:CART_REMOVE_ITEM,payload:productId});
-   
+    //const {cart:{cartItems}}=getState;
+    //Cookies.set("cartItems",JSON.stringify(cartItems));
 
 }
 const saveShipping=(data)=>(dispatch)=>{

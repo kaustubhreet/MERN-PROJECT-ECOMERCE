@@ -41,9 +41,9 @@ const Service = () => {
                
           <div class="card shadow p-3 mb-5 bg-white rounded" key={val._id} >
           <Link to={'/product/'+val._id}><img src={val.imgsrc} class="card-img-top" alt="343"/></Link>
-      <div className="card-body">
-      <h5 className="card-title"> {val.title}</h5>
-        <p className="card-text">{val.desc}</p>
+      <div className="card-body  text-dark">
+      <h5 className="card-title  text-dark"> {val.title}</h5>
+        <p className="card-text  text-dark">{val.desc}</p>
        <h6><strong>${val.price}</strong></h6>
         <NavLink to={'./product/'+val._id} className="btn btn-primary">
          Buy Now</NavLink>
