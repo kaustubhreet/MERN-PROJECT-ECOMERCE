@@ -20,17 +20,28 @@ import Blog2 from './Blog-2.jsx';
 import Blog3 from './Blog-3.jsx';
 import NotesHome from './NotesHome.js';
 import Alert  from './components/Alert';
+import {useState} from 'react';
 
 const App=()=>{
-  
+  const [alert,setAlert]=useState(null);
+  const showAlert=(message,type)=>{
+    setAlert(
+      {
+        msg:message,
+        type:type
+      })
+    setTimeout(()=>{
+      setAlert(null);
+    },15000);
+  }
     
   return (
       <div>
         <NoteState>
         <Navbar />
-        <Alert message="contents" />
+        <Alert alert={alert} />
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Home} showAlert={showAlert} />
           <Route exact path="/cart/:id?" component={Cart} />
           <Route exact path="/about" component={About} />
           <Route exact path="/product/:id" component={ProductScreen} />
@@ -38,12 +49,12 @@ const App=()=>{
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/checkout" component={checkout} />
           <Route exact path="/login">
-                <Login />
+                <Login showAlert={showAlert}/>
               </Route>
               <Route exact path="/signup">
-                <Signup />
+                <Signup showAlert={showAlert} />
               </Route>
-              <Route exact path="/home" component={NotesHome} />
+              <Route exact path="/home" component={NotesHome} showAlert={showAlert} />
               <Route exact path="/blog1" component={Blog1} />
               <Route exact path="/blog2" component={Blog2} />
               <Route exact path="/blog3" component={Blog3} />

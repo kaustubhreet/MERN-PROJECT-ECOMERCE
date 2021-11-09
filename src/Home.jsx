@@ -4,6 +4,7 @@ import Temp from './slider.js';
 import FAQs from './FAQs';
 import imag3 from '../src/quantum pics/pic-blog-2.png';
 import Flag from './footer.jsx';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -29,7 +30,7 @@ const Home = () => {
                         <div className="col" style={{fontSize:"32",fontWeight:"800",textTransform:"uppercase"}}>
                             <h1>Do Bussiness With Us</h1>
                             <br />
-                            <button className="btn" >Sign Up</button>
+                           <Link to="/signup"> <button className="btn" >Sign Up</button></Link>
                         </div>
                     </div>
 

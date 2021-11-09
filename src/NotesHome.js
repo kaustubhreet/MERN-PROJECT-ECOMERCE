@@ -1,9 +1,9 @@
 import Notes from './components/Notes';
 
-const NotesHome=()=>{
+const NotesHome=(props)=>{
     return (
 <>
-<Notes/>
+<Notes showAlert={props.showAlert} />
 </>
     )
 };
