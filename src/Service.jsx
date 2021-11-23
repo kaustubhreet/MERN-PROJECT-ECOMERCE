@@ -18,7 +18,7 @@ const Service = () => {
    //
   };
    },[])
- console.log(products);
+    console.log(products);
     return loading? <div>loading...</div>:
     error?<div>{error}</div>: 
     
@@ -34,7 +34,7 @@ const Service = () => {
                 <Route path={'/product/:id'+products._id}></Route> 
                     <div className="col-10 mx-auto">
                         <div className="row gy-4">
-                        
+
                                 { products.map((val)=>{
                                     return (
                 <div className="col-md-4 col-10 mx-auto">

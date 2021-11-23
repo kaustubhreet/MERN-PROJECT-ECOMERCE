@@ -4,7 +4,7 @@ import Noteitem from './Noteitem';
 import AddNote from './AddNote';
 import { useHistory } from 'react-router';
 
-const Notes = () => {
+const Notes = (props) => {
     const context = useContext(noteContext);
     let history = useHistory();
     const { notes, getNotes, editNote } = context;
@@ -24,11 +24,13 @@ const Notes = () => {
     const updateNote = (currentNote) => {
         ref.current.click();
         setNote({ id: currentNote._id, etitle: currentNote.title, edescription: currentNote.description, etag: currentNote.tag })
+    
     }
 
     const handleClick = (e) => {
         editNote(note.id, note.etitle, note.edescription, note.etag)
         refClose.current.click();
+        props.showAlert("Updated Successfully ","success");
     }
 
     const onChange = (e) => {
@@ -73,13 +75,13 @@ const Notes = () => {
                 </div>
             </div>
 
-            <div className="row my-3">
+           <div className="container my-3">
                 <h2>You Notes</h2>
                 <div className="container mx-2">
                     {notes.length === 0 && 'No notes to display'}
                 </div>
-                {notes.map((note) => {
-                    return <Noteitem key={note._id} updateNote={updateNote} note={note} />
+                {notes.map=((note) => {
+                    return <Noteitem key={note._id} updateNote={updateNote} showAlert={props.showAlert} note={note} />
                 })}
             </div>
         </>

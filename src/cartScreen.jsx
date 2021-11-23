@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../src/css/cart.css';
 
+
 const CartScreen = (props) => {
     const cart = useSelector(state => state.cart);
     const { cartItems } = cart;

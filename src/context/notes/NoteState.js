@@ -2,10 +2,9 @@ import NoteContext from "./noteContext";
 import { useState } from "react";
 
 const NoteState = (props) => {
-  const host = "http://localhost:5000"
-  const notesInitial = []
-  const [notes, setNotes] = useState(notesInitial)
-
+  const host = "http://localhost:5500"
+  const notesInitial = [];
+  
   // Get all Notes
   const getNotes = async () => {
     // API Call 
@@ -20,6 +19,20 @@ const NoteState = (props) => {
     //console.log(json);
     setNotes(json);
   }
+  const [notes, setNotes] = useState(notesInitial);
+
+
+ /* const addNote=(title,description,tag)=>{
+    console.log("Adding a new note")
+    const note={
+      "_id":"61939a9eb6e36174dd68ff78",
+      "user": "619395c7b6e36174dd68ff6f",
+  "title": "tree data structure part 2",
+  "description": "binary tree",
+  "tag": "bst"
+    };
+    setNotes(notes.concat(note))
+  }*/
 
   // Add a Note
   const addNote = async (title, description, tag) => {
@@ -33,9 +46,8 @@ const NoteState = (props) => {
       },
       body: JSON.stringify({title, description, tag})
     });
-
-    const note = await response.json();
-    setNotes(notes.concat(note))
+  const note = await response.json();
+    setNotes(notes.concat(note));
   }
 
   // Delete a Note
@@ -83,7 +95,7 @@ const NoteState = (props) => {
   }
 
   return (
-    <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote, getNotes }}>
+    <NoteContext.Provider value={{ notes, addNote, deleteNote, editNote, getNotes}}>
       {props.children}
     </NoteContext.Provider>
   )
